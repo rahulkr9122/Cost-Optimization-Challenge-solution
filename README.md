@@ -17,6 +17,9 @@ Please suggest a detailed, practical architecture with Azure-native tools.
 
 
 
+
+
+
 solution : 
 
 Proposed Architecture: Tiered Storage with Archival Strategy
@@ -33,6 +36,9 @@ Migrate older records (older than 3 months) to Azure Blob Storage as compressed 
 Use a structured folder hierarchy: e.g., billing-records/yyyy/MM/.
 
 --------------------------------x---------------------------------------
+
+
+
 How It Works
 ✅ Read Path (Unified Access)
 Implement a middleware logic layer (e.g., Azure Function or API Management policy):
@@ -84,6 +90,8 @@ Monitor with Azure Monitor / Log Analytics
 -> Track archival success, errors, and cold-record access latency.
 
 ---------------------------------x---------------------------------------------------
+
+
 Tools Stack Summary
 Service	Purpose
 Azure Cosmos DB	Hot storage for recent records
@@ -91,6 +99,7 @@ Azure Blob Storage	Cost-efficient cold storage
 Azure Functions / APIM	Unified access routing logic
 Azure Data Factory	Archival pipeline
 Azure Monitor	Observability and alerting
+
 
 -----------------------------------X-------------------------------------------------
 
@@ -102,6 +111,8 @@ Avoids vendor lock-in.
 Leverages serverless capabilities and Azure-native tools.
 
 ----------------------------------------------x---------------------------------------------
+
+
 
 HANDSON CODE IN C#
 
