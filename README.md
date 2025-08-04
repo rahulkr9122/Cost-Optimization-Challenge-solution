@@ -1,3 +1,9 @@
+Name : Rahul Kumar Prasad
+Exp : 3 year
+phone : 6203027876
+
+
+
 # Cost-Optimization-Challenge-solution
 Cost Optimization Challenge: Managing Billing Records in Azure Serverless Architecture
 
